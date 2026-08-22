@@ -1,0 +1,27 @@
+# Starting point for /etc/glance/glance.yml.
+# Full widget/config reference: https://github.com/glanceapp/glance/blob/main/docs/configuration.md
+
+server:
+  host: 127.0.0.1 # bind to loopback; reach it via a reverse proxy or VPN, don't expose directly
+  port: 8070
+
+pages:
+  - name: Home
+    columns:
+      - size: small
+        widgets:
+          - type: clock
+            hour-format: 24h
+
+          - type: weather
+            location: London, United Kingdom
+            units: metric
+
+      - size: full
+        widgets:
+          - type: rss
+            limit: 10
+            collapse-after: 5
+            feeds:
+              - url: https://news.ycombinator.com/rss
+                title: Hacker News

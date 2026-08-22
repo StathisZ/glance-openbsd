@@ -1,0 +1,14 @@
+#!/bin/ksh
+#
+# rc.d(8) script for glance (https://github.com/glanceapp/glance)
+# Install to /etc/rc.d/glance, mode 555, owner root:wheel.
+
+daemon="/usr/local/bin/glance"
+daemon_flags="--config /etc/glance/glance.yml"
+daemon_user="_glance"
+daemon_logger="daemon.info"
+
+. /etc/rc.d/rc.subr
+
+rc_bg="YES"
+rc_cmd $1
