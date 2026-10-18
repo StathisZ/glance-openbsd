@@ -55,6 +55,10 @@ doas rm -r /etc/glance          # only if you want the config gone too
 doas userdel _glance
 ```
 
+## Related
+
+- [readeck-openbsd](https://github.com/StathisZ/readeck-openbsd) does the same for Readeck, a self-hosted read-it-later service. Readeck has no OpenBSD binary, so that repository also builds one.
+
 ## License
 
 This repo (the `rc.d` script, install script, and example config) is MIT-licensed — see `LICENSE`. Glance itself is [AGPL-3.0](https://github.com/glanceapp/glance/blob/main/LICENSE), owned by [glanceapp](https://github.com/glanceapp/glance).
